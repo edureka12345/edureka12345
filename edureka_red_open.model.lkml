@@ -15,7 +15,16 @@ persist_with: edureka_red_open_default_datagroup
 
 explore: crm_calls {}
 
-explore: crm_leads {}
+explore: crm_leads {
+  join: crm_potentials {
+    sql_on: ${crm_leads.leadid} = ${crm_potentials.leadid} ;;
+    relationship: one_to_one
+  }
+  join: crm_calls {
+    sql_on: ${crm_calls.related_to} = ${crm_potentials.potentialid} ;;
+    relationship: many_to_one
+  }
+}
 
 explore: crm_potentials {}
 
