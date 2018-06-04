@@ -202,6 +202,6 @@ view: crm_leads {
 
   measure: count {
     type: count
-    drill_fields: [first_name, last_name]
+    drill_fields: [first_name, last_name,channel,utm_campaign,course,country_code,created_date_date,email,phone]
   }
 }
