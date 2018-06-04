@@ -41,7 +41,7 @@ view: crm_leads {
     sql: ${TABLE}.created_by ;;
   }
 
-  dimension_group: created {
+  dimension_group: created_time {
     type: time
     timeframes: [
       raw,
@@ -56,7 +56,7 @@ view: crm_leads {
     sql: ${TABLE}.created_date ;;
   }
 
-  dimension_group: created {
+  dimension_group: created_date {
     type: time
     timeframes: [
       raw,
